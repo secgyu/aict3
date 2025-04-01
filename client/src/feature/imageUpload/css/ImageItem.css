@@ -1,0 +1,52 @@
+.card-item {
+  padding: 10px;
+}
+.card-item:active {
+  z-index: 100;
+}
+
+.card-bg:hover {
+  outline: 6px solid var(--theme-lightyellow-color);
+}
+
+.card-bg:active {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2), 0 24px 16px rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+
+
+
+.close-icon {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  height: 1.6rem;
+  width: 1.6rem;
+  color: gray;
+  stroke: var(--theme-lightgray-color);
+  stroke-width: 4px;
+}
+
+.close-icon1 {
+  stroke: gray;
+  stroke-width: 5px;
+}
+.close-icon2 {
+  stroke: white;
+  stroke-width: 2px;
+}
+.card-img {
+  width: auto;
+  height: 8rem;
+  object-fit: cover;
+  cursor: grab;
+  border-radius: 0.5rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -4px;
+}
+
+.card-idx {
+  text-align: center;
+}
+

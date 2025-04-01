@@ -1,0 +1,18 @@
+[
+    {
+        "image": "./demoImages/menu1.png",
+        "slide": 1
+    },
+    {
+        "image": "./demoImages/menu2.png",
+        "slide": 2
+    },
+    {
+        "image": "./demoImages/menu3.png",
+        "slide": 3
+    },
+    {
+        "image": "./demoImages/menu4.png",
+        "slide": 4
+    }
+]

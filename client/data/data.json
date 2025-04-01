@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "fieldname": "file",
+    "mimetype": "image/png",
+    "destination": "/Users/salee/Downloads/AICT_RR-main/client/src/uploads",
+    "filename": "37ff8015c54c9ec9.png",
+    "path": "/Users/salee/Downloads/AICT_RR-main/client/src/uploads/37ff8015c54c9ec9.png",
+    "size": 368993,
+    "url": "http://localhost:4000/uploads/37ff8015c54c9ec9.png"
+  }
+]
