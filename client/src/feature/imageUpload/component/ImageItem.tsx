@@ -1,7 +1,7 @@
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import '../css/ImageItem.css';
-import { ReactComponent as CloseIcon } from '../../../icons/fluent--dismiss-24-filled.svg';
+import CloseIcon from '../../../icons/fluent--dismiss-24-filled.svg?react';
 import { Images } from '../../common/types.ts';
 
 interface Props {

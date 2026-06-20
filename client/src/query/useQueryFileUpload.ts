@@ -7,7 +7,7 @@ export const fileUpload = async (file: File) => {
 
   const response =
     await axios.post(
-      `${process.env.REACT_APP_API_URL}/files`,
+      `${import.meta.env.VITE_API_URL}/files`,
       formData, {
       headers: {
         "Content-Type": "multipart/form-data",

@@ -1,6 +1,2 @@
-declare module '*.css';
-declare module '*.svg' {
-    export const ReactComponent: React.FunctionComponent<
-        React.SVGAttributes<SVGElement>
-    >;
-}
+/// <reference types="vite/client" />
+/// <reference types="vite-plugin-svgr/client" />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ReactComponent as InfoIcon } from '../../../icons/fluent--info-20-regular.svg';
+import InfoIcon from '../../../icons/fluent--info-20-regular.svg?react';
 import { useQueryFiles } from '../../../query/useQueryFiles.ts';
 import useQueryUpdateSort from '../../../query/useQueryUpdateSort.ts';
 import ImageUploadButton from './ImageUploadButton.tsx';

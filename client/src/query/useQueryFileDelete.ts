@@ -2,7 +2,7 @@ import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 
 const deleteImage = async (filename: string) => {
-  const response = await axios.delete(`${process.env.REACT_APP_API_URL}/files/delete/${filename}`);
+  const response = await axios.delete(`${import.meta.env.VITE_API_URL}/files/delete/${filename}`);
   return response.data;
 };
 

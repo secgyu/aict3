@@ -2,7 +2,7 @@ import { CSS } from '@dnd-kit/utilities';
 import { useSortable } from '@dnd-kit/sortable';
 import { Images } from '../../common/types.ts';
 import '../css/ImageItem.css';
-import { ReactComponent as CloseIcon } from '../../../icons/fluent--dismiss-24-filled.svg';
+import CloseIcon from '../../../icons/fluent--dismiss-24-filled.svg?react';
 import useQueryFileDelete from '../../../query/useQueryFileDelete.ts';
 import styled from 'styled-components';
 
@@ -65,7 +65,9 @@ const SortableItemStyleWrapper = styled.div`
     background-color: #fff;
     border: 0px solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow:
+      0 0px 3px rgba(0, 0, 0, 0.2),
+      0 2px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     outline: 0 solid var(--theme-lightyellow-color);
   }

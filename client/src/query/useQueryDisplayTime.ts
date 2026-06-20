@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 const fetchDisplayTime = async () => {
   // await delay(1000)
   const { data } = await axios.get(
-    `${process.env.REACT_APP_API_URL}/display-settings`,
+    `${import.meta.env.VITE_API_URL}/display-settings`,
   );
   return data;
 }

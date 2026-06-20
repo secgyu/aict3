@@ -4,7 +4,7 @@ import { Images } from "../feature/common/types.ts";
 
 const updateSort = async (newImages: any) => {
   const response = await axios.post(
-    `${process.env.REACT_APP_API_URL}/files/update`,
+    `${import.meta.env.VITE_API_URL}/files/update`,
     newImages,
     { headers: { 'Content-Type': 'application/json' } }
   );

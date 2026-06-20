@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { ReactComponent as TransitionIcon } from '../icons/fluent--slide-settings-24-regular.svg';
-import { ReactComponent as SlidesIcon } from '../icons/fluent--slide-multiple-24-regular.svg';
+import TransitionIcon from '../icons/fluent--slide-settings-24-regular.svg?react';
+import SlidesIcon from '../icons/fluent--slide-multiple-24-regular.svg?react';
 
 export default function SettingSidebar() {
   return (

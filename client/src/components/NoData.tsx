@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ReactComponent as NoFileIcon } from '../icons/fluent--document-split-hint-off-20-regular.svg';
+import NoFileIcon from '../icons/fluent--document-split-hint-off-20-regular.svg?react';
 import styled from 'styled-components';
 
 const NoData = () => {

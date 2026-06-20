@@ -1,4 +1,4 @@
-import { ReactComponent as UploadIcon } from '../../../icons/fluent--arrow-upload-20-filled.svg';
+import UploadIcon from '../../../icons/fluent--arrow-upload-20-filled.svg?react';
 import { ChangeEvent } from 'react';
 import useQueryFileUpload from '../../../query/useQueryFileUpload.ts';
 import styled from 'styled-components';
