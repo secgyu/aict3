@@ -1,13 +1,31 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-theme-gold: #ffad0c;
+  --color-theme-lightyellow: #ffe7b2;
+  --color-theme-orange: #fc670c;
+  --color-theme-darkbrown: #351600;
+  --color-theme-lightgray: #dfdfdf;
+}
+
+:root {
+  --theme-gold-color: #ffad0c;
+  --theme-lightyellow-color: #ffe7b2;
+  --theme-orange-color: #fc670c;
+  --theme-darkbrown-color: #351600;
+  --theme-lightgray-color: #dfdfdf;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

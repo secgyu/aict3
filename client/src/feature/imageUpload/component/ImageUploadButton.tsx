@@ -1,7 +1,6 @@
 import UploadIcon from '../../../icons/fluent--arrow-upload-20-filled.svg?react';
 import { ChangeEvent } from 'react';
 import useQueryFileUpload from '../../../query/useQueryFileUpload.ts';
-import styled from 'styled-components';
 
 const ImageUploadButton = () => {
   const { mutate } = useQueryFileUpload();
@@ -17,9 +16,12 @@ const ImageUploadButton = () => {
   };
 
   return (
-    <UploadButtonWrapper>
+    <div className='rounded-2xl bg-theme-orange text-white'>
       <form encType='multipart/form-data'>
-        <label htmlFor='file' className='upload-button'>
+        <label
+          htmlFor='file'
+          className='flex cursor-pointer items-center justify-center gap-4 py-4 text-[1.6rem]'
+        >
           <UploadIcon />
           <span>이미지 업로드</span>
         </label>
@@ -27,31 +29,12 @@ const ImageUploadButton = () => {
           type='file'
           id='file'
           name='file'
-          className='upload'
+          className='hidden'
           onChange={handleImageUpload}
         />
       </form>
-    </UploadButtonWrapper>
+    </div>
   );
 };
 
 export default ImageUploadButton;
-
-const UploadButtonWrapper = styled.div`
-  border-radius: 1rem;
-  background-color: var(--theme-orange-color);
-  color: white;
-
-  .upload-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    cursor: pointer;
-    font-size: 1.6rem;
-    gap: 1rem;
-  }
-  .upload {
-    display: none;
-  }
-`;

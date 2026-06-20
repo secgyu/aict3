@@ -1,24 +1,16 @@
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
 
 export default function TopBar() {
   const navigate = useNavigate();
 
   return (
-    <StyledTopBar>
+    <div className='h-[60px] w-full bg-theme-gold p-2'>
       <img
         src='/image/logo.png'
         alt='logo'
-        style={{ width: '150px', height: 'auto' }}
+        className='h-auto w-[150px]'
         onClick={() => navigate('/')}
       />
-    </StyledTopBar>
+    </div>
   );
 }
-
-const StyledTopBar = styled.div`
-  width: 100%;
-  height: 60px;
-  background-color: #ffad0c;
-  padding: 8px;
-`;

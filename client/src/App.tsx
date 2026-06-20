@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Main from './pages/Main.tsx';
 import ScreenDisplaySetting from './pages/transition-time/ScreenDisplaySetting.tsx';
 import ScreenImageUpload from './pages/image-upload/ScreenImageUpload.tsx';
-import './App.css';
 import Layout from './pages/layout..tsx';
 import useQueryDisplayTime from './query/useQueryDisplayTime.ts';
 import { Suspense } from 'react';

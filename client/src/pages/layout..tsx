@@ -1,58 +1,26 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import styled from 'styled-components';
 import TopBar from '../layout/TopBar.tsx';
 import SettingSidebar from '../layout/SettingSidebar.tsx';
 
 const Layout = () => {
   const location = useLocation();
-  const isRootPath = location.pathname === '/'; // 현재 경로가 "/"인지 확인
+  const isRootPath = location.pathname === '/';
 
   return (
-    <LayoutWrapper>
+    <div className='relative m-0 flex h-screen w-screen flex-col overflow-hidden p-0'>
       <TopBar />
-      <Content>
+      <div className='flex h-[calc(100vh-50px)]'>
         {!isRootPath && (
-          <SidebarWrapper>
+          <div className='relative h-full w-[250px] bg-[#f0f0f0] shadow-[2px_0_5px_rgba(0,0,0,0.1)]'>
             <SettingSidebar />
-          </SidebarWrapper>
+          </div>
         )}
-        <MainContent>
+        <div className='h-full grow overflow-auto p-5'>
           <Outlet />
-        </MainContent>
-      </Content>
-    </LayoutWrapper>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Layout;
-
-const LayoutWrapper = styled.div`
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Content = styled.div`
-  display: flex;
-  height: calc(100vh - 50px); // TopBar 높이 제외
-`;
-
-const SidebarWrapper = styled.div`
-  width: 250px; // Sidebar 너비
-  height: 100%;
-  background-color: #f0f0f0; // 배경색 (선택 사항)
-  position: relative;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-`;
-
-const MainContent = styled.div`
-  flex-grow: 1;
-  height: 100%;
-  overflow: auto;
-  padding: 20px;
-`;

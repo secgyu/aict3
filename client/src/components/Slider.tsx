@@ -27,7 +27,11 @@ export const Slider = ({ slides = [] }: Props) => {
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id} className='slide'>
-          <img src={slide.path} alt={slide.filename} />
+          <img
+            src={slide.path}
+            alt={slide.filename}
+            className='h-screen w-screen object-cover'
+          />
         </SwiperSlide>
       ))}
     </Swiper>

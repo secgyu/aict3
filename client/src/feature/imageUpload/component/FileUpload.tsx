@@ -7,7 +7,6 @@ import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, arrayMove } from '@dnd-kit/sortable';
 import SortableItem from './SortItem.tsx';
 import { Images } from '../../common/types.ts';
-import styled from 'styled-components';
 
 const FileUpload = () => {
   const [fileList, setFileList] = useState<Images[]>([]);
@@ -50,18 +49,20 @@ const FileUpload = () => {
   };
   console.log(fileList);
   return (
-    <FileUploadStyleWrapper>
+    <div>
       <ImageUploadButton />
 
-      <div className='desc-container'>
-        <InfoIcon className='info-icon' />
-        <p className='desc'>이미지를 드래그해서 순서를 조정할 수 있어요</p>
+      <div className='m-[0.8rem] flex items-center justify-center gap-[0.4rem] text-theme-orange'>
+        <InfoIcon className='h-[1.3rem] w-[1.3rem]' />
+        <p className='m-0 text-[1.1rem]'>
+          이미지를 드래그해서 순서를 조정할 수 있어요
+        </p>
       </div>
 
       <DndContext onDragEnd={handleDragEnd}>
         {fileList.length > 0 && (
           <SortableContext items={fileList.map((file) => file.id)}>
-            <div className='dnd-container'>
+            <div className='flex flex-wrap justify-center gap-4 rounded-[10px] bg-white p-4'>
               {fileList.map((file) => (
                 <SortableItem key={file.id} slideImage={file} />
               ))}
@@ -69,46 +70,8 @@ const FileUpload = () => {
           </SortableContext>
         )}
       </DndContext>
-    </FileUploadStyleWrapper>
+    </div>
   );
 };
 
 export default FileUpload;
-
-const FileUploadStyleWrapper = styled.div`
-  .desc-container {
-    color: var(--theme-orange-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.8rem;
-    gap: 0.4rem;
-  }
-
-  .desc {
-    font-size: 1.1rem;
-    margin: 0;
-  }
-
-  .info-icon {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
-
-  .dnd-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 10px;
-  }
-
-  .file-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-`;
